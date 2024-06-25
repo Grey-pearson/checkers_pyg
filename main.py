@@ -16,9 +16,11 @@ my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
 # you can do one not in a list for single imgs tho
 white_puck = my_sprite_sheet.parse_sprite('white_puck.png') 
 black_puck = my_sprite_sheet.parse_sprite('black_puck.png')
+# squares
 white_square = my_sprite_sheet.parse_sprite('white_square.png')
 black_square = my_sprite_sheet.parse_sprite('black_square.png')
 red_square = my_sprite_sheet.parse_sprite('red_square.png')
+# selector
 selector_TL = my_sprite_sheet.parse_sprite('selector_TL.png')
 selector_TM = my_sprite_sheet.parse_sprite('selector_TM.png')
 selector_TR = my_sprite_sheet.parse_sprite('selector_TR.png')
@@ -27,8 +29,12 @@ selector_RM = my_sprite_sheet.parse_sprite('selector_RM.png')
 selector_BL = my_sprite_sheet.parse_sprite('selector_BL.png')
 selector_BM = my_sprite_sheet.parse_sprite('selector_BM.png')
 selector_BR = my_sprite_sheet.parse_sprite('selector_BR.png')
+# text
 white_to_play = my_sprite_sheet.parse_sprite('white_to_play.png')
 black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
+
+
+
 
 while running:
 
