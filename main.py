@@ -4,8 +4,6 @@ from settings import *
 
 my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
 
-
-
 class Game():
     def __init__(self):
         # to make assigning pieces to specific coordinates 
