@@ -60,6 +60,7 @@ class Game():
                 else:
                     # print((col+1) % 2, "  else  ", col)
                     self.screen.blit(self.white_square, self.coordinates(row+1,col+2))
+                    # this needs to do another every other thing
 
 
     def run(self):
