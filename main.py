@@ -12,8 +12,7 @@ my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
 
 # you can string frames in this list format to get animnations stored in one variable
 # white_puck = [my_sprite_sheet.parse_sprite('white_puck.png')]  
-
-# you can do one not in a list for single imgs tho
+# 'pucks'
 white_puck = my_sprite_sheet.parse_sprite('white_puck.png') 
 black_puck = my_sprite_sheet.parse_sprite('black_puck.png')
 # squares
@@ -33,7 +32,22 @@ selector_BR = my_sprite_sheet.parse_sprite('selector_BR.png')
 white_to_play = my_sprite_sheet.parse_sprite('white_to_play.png')
 black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
 
+class Game():
+    def __init__(self):
+        # to make assigning pieces to specific coordinates 
 
+    
+
+
+
+        def coordinates(self, x, y):
+            x *= 32
+            y *= 32
+            calculated_coordinates = (x,y)
+            return(calculated_coordinates)
+
+        def create_board(self):
+            pass
 
 
 while running:
