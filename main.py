@@ -13,7 +13,6 @@ class Game():
         self.screen = pygame.display.set_mode((DISPLAY_W,DISPLAY_H))
         pygame.display.set_caption("checkers")
         self.clock = pygame.time.Clock()
-        running = True
 
 
 
