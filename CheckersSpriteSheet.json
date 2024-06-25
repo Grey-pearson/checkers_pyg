@@ -5,7 +5,8 @@
                 "x": 24,
                 "y": 16,
                 "w": 8,
-                "h": 8
+                "h": 8,
+                "scale": 3
             },
             "rotated": false,
             "trimmed": false,
@@ -25,7 +26,8 @@
                 "x": 32,
                 "y": 16,
                 "w": 8,
-                "h": 8
+                "h": 8,
+                "scale": 2
             },
             "rotated": false,
             "trimmed": false,
