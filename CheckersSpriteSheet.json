@@ -6,7 +6,7 @@
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "black_puck.png": {
@@ -15,106 +15,124 @@
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "white_square.png": {
             "frame": {
                 "x": 32,
-                "y": 16,
+                "y": 8,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "black_square.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 40,
+                "y": 8,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "red_square.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 0,
+                "y": 8,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_TL.png": {
             "frame": {
-                "x": 32,
+                "x": 0,
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_TM.png": {
             "frame": {
-                "x": 32,
+                "x": 8,
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_TR.png": {
             "frame": {
-                "x": 32,
+                "x": 16,
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_LM.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 0,
+                "y": 24,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_RM.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 16,
+                "y": 24,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_BL.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 0,
+                "y": 32,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_BM.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 8,
+                "y": 32,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
             }
         },
         "selector_BR.png": {
             "frame": {
-                "x": 32,
-                "y": 16,
+                "x": 16,
+                "y": 32,
                 "w": 8,
                 "h": 8,
-                "scale": 3
+                "scale": 4
+            }
+        },
+        "white_to_play.png": {
+            "frame": {
+                "x": 80,
+                "y": 8,
+                "w": 64,
+                "h": 10,
+                "scale": 4
+            }
+        },
+        "black_to_play.png": {
+            "frame": {
+                "x": 77,
+                "y": 112,
+                "w": 64,
+                "h": 10,
+                "scale": 4
             }
         }
     },
