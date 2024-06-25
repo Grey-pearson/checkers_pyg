@@ -1,5 +1,5 @@
 import pygame
-import sprite_sheet as Spritesheet
+from sprite_sheet import Spritesheet
 
 pygame.init()
 DISPLAY_W, DISPLAY_H = 480, 400
@@ -9,21 +9,20 @@ clock = pygame.time.Clock()
 running = True
 
 my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
-white_puck = [my_sprite_sheet.parse_sprite('white_puck.png')]
 
+# you can string frames in this list format to get animnations stored in one variable
+# white_puck = [my_sprite_sheet.parse_sprite('white_puck.png')]  
 
-
-# sprite_sheet_image = pygame.image.load('CheckersSpriteSheet.png').convert_alpha()
-# 22 blocks long
-# 16 blocks tall
-
+# you can do one not in a list for single imgs tho
+white_puck = my_sprite_sheet.parse_sprite('white_puck.png') 
+white_puck = pygame.transform.scale(white_puck, (32,32))
 
 while running:
 
     screen.fill((75,150,100))
 
     # game code;
-    screen.blit(white_puck[0], (0, DISPLAY_H - 128))
+    screen.blit(white_puck, (0, DISPLAY_H - 128))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
