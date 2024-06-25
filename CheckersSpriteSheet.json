@@ -7,18 +7,6 @@
                 "w": 8,
                 "h": 8,
                 "scale": 3
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
-                "w": 8,
-                "h": 8
-            },
-            "sourceSize": {
-                "w": 8,
-                "h": 8
             }
         },
         "black_puck.png": {
@@ -27,19 +15,106 @@
                 "y": 16,
                 "w": 8,
                 "h": 8,
-                "scale": 2
-            },
-            "rotated": false,
-            "trimmed": false,
-            "spriteSourceSize": {
-                "x": 0,
-                "y": 0,
+                "scale": 3
+            }
+        },
+        "white_square.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
                 "w": 8,
-                "h": 8
-            },
-            "sourceSize": {
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "black_square.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
                 "w": 8,
-                "h": 8
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "red_square.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_TL.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_TM.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_TR.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_LM.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_RM.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_BL.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_BM.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
+            }
+        },
+        "selector_BR.png": {
+            "frame": {
+                "x": 32,
+                "y": 16,
+                "w": 8,
+                "h": 8,
+                "scale": 3
             }
         }
     },
@@ -50,7 +125,6 @@
         "size": {
             "w": 176,
             "h": 128
-        },
-        "scale": "3"
+        }
     }
 }
