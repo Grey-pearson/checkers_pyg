@@ -51,6 +51,9 @@ class Game():
 
     def outline(self,x,y,w,h):
         self.screen.blit(self.selector_TL, self.coordinates(x,y))
+        self.screen.blit(self.selector_TR, self.coordinates(x,y))
+        self.screen.blit(self.selector_TL, self.coordinates(x,y))
+        self.screen.blit(self.selector_TL, self.coordinates(x,y))
 
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
