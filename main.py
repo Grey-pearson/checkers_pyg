@@ -55,18 +55,19 @@ class Game():
         self.screen.blit(self.selector_BL, self.coordinates(x,y+h))
         self.screen.blit(self.selector_BR, self.coordinates(x+w,y+h))
 
-        for sides in range(w):
-            for TopBottom in range(h):
-                self.screen.blit(self.selector_TM, self.coordinates(x+TopBottom+1,y))
-                self.screen.blit(self.selector_BM, self.coordinates(x+TopBottom+1,y+h))
-                self.screen.blit(self.selector_LM, self.coordinates(x,y+sides+1))
-                self.screen.blit(self.selector_RM, self.coordinates(x+w,y+sides+1))
+        for sides in range(1,w):
+            for TopBottom in range(1,h):
+                print(f"{sides}   {TopBottom}")
+                self.screen.blit(self.selector_TM, self.coordinates(x+TopBottom,y))
+                self.screen.blit(self.selector_BM, self.coordinates(x+TopBottom,y+h))
+                self.screen.blit(self.selector_LM, self.coordinates(x,y+sides))
+                self.screen.blit(self.selector_RM, self.coordinates(x+w,y+sides))
 
 
 
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
-        self.outline(0,1,9,9)
+        # self.outline(0,1,9,9)
         self.outline(2,2)
         for col in range(8):
             for row in range(8):
