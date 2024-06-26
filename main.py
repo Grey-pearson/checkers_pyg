@@ -51,13 +51,22 @@ class Game():
 
     def outline(self,x,y,w,h):
         self.screen.blit(self.selector_TL, self.coordinates(x,y))
-        self.screen.blit(self.selector_TR, self.coordinates(x,y))
-        self.screen.blit(self.selector_TL, self.coordinates(x,y))
-        self.screen.blit(self.selector_TL, self.coordinates(x,y))
+        self.screen.blit(self.selector_TR, self.coordinates(x+w,y))
+        self.screen.blit(self.selector_BL, self.coordinates(x,y+h))
+        self.screen.blit(self.selector_BR, self.coordinates(x+w,y+h))
+
+        for side in range(w):
+            for side in range(h):
+                self.screen.blit(self.selector_TM, self.coordinates(x,y))
+                self.screen.blit(self.selector_LM, self.coordinates(x+w,y))
+                self.screen.blit(self.selector_RM, self.coordinates(x,y+h))
+                self.screen.blit(self.selector_BM, self.coordinates(x+w,y+h))
+
+
 
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
-        self.outline(0,1,1,1)
+        self.outline(0,1,9,9)
         for col in range(8):
             for row in range(8):
                 # if (row+1) % 2 == 1 and (col+1) % 2 == 1 or (row+1) % 2 == 0 and (col+1) % 2 == 0:
