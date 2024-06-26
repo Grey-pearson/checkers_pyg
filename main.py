@@ -57,7 +57,6 @@ class Game():
 
         for sides in range(1,w):
             for TopBottom in range(1,h):
-                print(f"{sides}   {TopBottom}")
                 self.screen.blit(self.selector_TM, self.coordinates(x+TopBottom,y))
                 self.screen.blit(self.selector_BM, self.coordinates(x+TopBottom,y+h))
                 self.screen.blit(self.selector_LM, self.coordinates(x,y+sides))
@@ -67,13 +66,14 @@ class Game():
 
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
-        # self.outline(0,1,9,9)
-        self.outline(2,2)
+        self.outline(0,1,9,9)
         for col in range(8):
             for row in range(8):
                 # if (row+1) % 2 == 1 and (col+1) % 2 == 1 or (row+1) % 2 == 0 and (col+1) % 2 == 0:
                 if row % 2 == 0 and col % 2 == 0 or row % 2 == 1 and col % 2 == 1:
                     self.screen.blit(self.black_square, self.coordinates(row+1,col+2))
+        # to select one square
+        # self.outline(2,4)
 
 
     def run(self):
