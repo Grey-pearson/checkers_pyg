@@ -3,7 +3,7 @@ from sprite_sheet import Spritesheet
 # from settings import *
 
 DISPLAY_W, DISPLAY_H = 320, 384
-RED = (78,40,46)
+RED = (100,40,46)
 
 
 class Game():
@@ -49,18 +49,17 @@ class Game():
         calculated_coordinates = (x,y)
         return(calculated_coordinates)
 
+    def outline(self,x,y,w,h):
+        self.screen.blit(self.selector_TL, self.coordinates(x,y))
+
     def create_board(self):
-        # this works
-        # self.screen.blit(self.white_puck, self.coordinates(1,1))
+        self.screen.blit(self.white_square, self.coordinates(1,2))
+        self.outline(0,1,1,1)
         for col in range(8):
             for row in range(8):
-                if (row+1) % 2 == 1:
-                    # print((col+1) % 2, '   ', col)
+                # if (row+1) % 2 == 1 and (col+1) % 2 == 1 or (row+1) % 2 == 0 and (col+1) % 2 == 0:
+                if row % 2 == 0 and col % 2 == 0 or row % 2 == 1 and col % 2 == 1:
                     self.screen.blit(self.black_square, self.coordinates(row+1,col+2))
-                else:
-                    # print((col+1) % 2, "  else  ", col)
-                    self.screen.blit(self.white_square, self.coordinates(row+1,col+2))
-                    # this needs to do another every other thing
 
 
     def run(self):
