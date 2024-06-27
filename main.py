@@ -7,7 +7,7 @@ from sprite_sheet import Spritesheet
 # post scaled imgs are 32 px
 
 DISPLAY_W, DISPLAY_H = 320, 384
-RED = (100,40,46)
+RED = (80,30,36)
 BLACK = (0,0,0,0)
 
 
@@ -19,7 +19,7 @@ class Game():
         
         self.screen = pygame.display.set_mode((DISPLAY_W,DISPLAY_H))
         pygame.display.set_caption("checkers")
-        self.screen.fill(RED)
+        
         self.clock = pygame.time.Clock()
         # self.my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
         my_sprite_sheet = Spritesheet('CheckersSpriteSheet.png')
@@ -47,15 +47,15 @@ class Game():
         self.white_to_play = my_sprite_sheet.parse_sprite('white_to_play.png')
         self.black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
 
-        self.create_board()
+        
         # self.selector = [self.selector_square.get_rect()]
         self.selector = self.selector_square.get_rect()
         self.plr_white = [self.white_puck.get_rect(), self.white_puck.get_rect()]
         self.plr_white[0].topleft = (self.coordinates(5,3,2))
         self.plr_white[1].topleft = (self.coordinates(3,2,1))
         # pygame.draw.rect(self.screen, BLACK, self.plr_white, 48)
-        self.screen.blit(self.white_puck, self.plr_white[0])
-        self.screen.blit(self.white_puck, self.plr_white[1])
+        # self.screen.blit(self.white_puck, self.plr_white[0])
+        # self.screen.blit(self.white_puck, self.plr_white[1])
         
     
     def hover(self):
@@ -65,9 +65,11 @@ class Game():
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
                 print(topleft[0])
-                self.selector.topleft = (topleft[0], topleft[1])
+                self.selector.topleft = (topleft[0]-16, topleft[1]-16)
                 self.screen.blit(self.selector_square, self.selector)
                 # self.outline(topleft[0]/32,topleft[1]/32)
+            # if self.plr_white[i].collidepoint(mouse_pos) == False:
+                
             
 
     def coordinates(self, x, y, offset=0):
@@ -110,6 +112,10 @@ class Game():
             # delta time
             # dt = time.time() - last_time
             last_time = time.time()
+            self.screen.fill(RED)
+            self.create_board()
+            self.screen.blit(self.white_puck, self.plr_white[0])
+            self.screen.blit(self.white_puck, self.plr_white[1])
             self.hover()
             # event loop
             for event in pygame.event.get():
