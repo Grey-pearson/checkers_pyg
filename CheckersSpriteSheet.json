@@ -45,6 +45,15 @@
                 "scale": 4
             }
         },
+        "selctor.png": {
+            "frame": {
+                "x": 4,
+                "y": 20,
+                "w": 16,
+                "h": 16,
+                "scale": 4
+            }
+        },
         "selector_TL.png": {
             "frame": {
                 "x": 0,
