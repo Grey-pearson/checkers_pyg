@@ -4,6 +4,7 @@ from sprite_sheet import Spritesheet
 
 DISPLAY_W, DISPLAY_H = 320, 384
 RED = (100,40,46)
+BLACK = (0,0,0,0)
 
 
 class Game():
@@ -42,14 +43,27 @@ class Game():
         self.black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
 
         self.create_board()
-        self.plr_white = self.white_puck.get_rect()
-        self.plr_white.center = 0,0
-        pygame.draw.rect(self.screen, RED, self.plr_white, 1)
+        self.plr_white = [self.white_puck.get_rect(), self.white_puck.get_rect()]
+        self.plr_white[0].topleft = (self.coordinates(5,3,2))
+        self.plr_white[1].topleft = (self.coordinates(3,2,1))
+        # pygame.draw.rect(self.screen, BLACK, self.plr_white, 48)
+        self.screen.blit(self.white_puck, self.plr_white[0])
+        self.screen.blit(self.white_puck, self.plr_white[1])
+        
+    
+    def hover(self):
+        mouse_pos = pygame.mouse.get_pos()
+        # print(mouse_pos)
+        for i in range(len(self.plr_white)):
+            if self.plr_white[i].collidepoint(mouse_pos):
+                topleft = self.plr_white[i].topleft
+                print(topleft[0])
+                self.outline(topleft[0],topleft[1],2,2)
 
-    def coordinates(self, x, y):
+    def coordinates(self, x, y, offset=0):
         x *= 32
         y *= 32
-        calculated_coordinates = (x,y)
+        calculated_coordinates = (x,y-offset)
         return(calculated_coordinates)
 
     def outline(self,x,y,w=2,h=2):
@@ -86,7 +100,7 @@ class Game():
             # delta time
             # dt = time.time() - last_time
             last_time = time.time()
-
+            self.hover()
             # event loop
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
