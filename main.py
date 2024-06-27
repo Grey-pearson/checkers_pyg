@@ -34,6 +34,7 @@ class Game():
         self.black_square = my_sprite_sheet.parse_sprite('black_square.png')
         self.red_square = my_sprite_sheet.parse_sprite('red_square.png')
         # selector
+        self.selector_square = my_sprite_sheet.parse_sprite('selector.png')
         self.selector_TL = my_sprite_sheet.parse_sprite('selector_TL.png')
         self.selector_TM = my_sprite_sheet.parse_sprite('selector_TM.png')
         self.selector_TR = my_sprite_sheet.parse_sprite('selector_TR.png')
@@ -47,6 +48,8 @@ class Game():
         self.black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
 
         self.create_board()
+        # self.selector = [self.selector_square.get_rect()]
+        self.selector = self.selector_square.get_rect()
         self.plr_white = [self.white_puck.get_rect(), self.white_puck.get_rect()]
         self.plr_white[0].topleft = (self.coordinates(5,3,2))
         self.plr_white[1].topleft = (self.coordinates(3,2,1))
@@ -62,7 +65,10 @@ class Game():
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
                 print(topleft[0])
+                self.selector.topleft = (topleft[0], topleft[1])
+                self.screen.blit(self.selector_square, self.selector)
                 # self.outline(topleft[0]/32,topleft[1]/32)
+            
 
     def coordinates(self, x, y, offset=0):
         x *= 32
