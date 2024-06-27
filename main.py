@@ -2,6 +2,10 @@ import pygame, sys, time
 from sprite_sheet import Spritesheet
 # from settings import *
 
+# imgs are avg all scaled by 4
+# imgs are 8 px
+# post scaled imgs are 32 px
+
 DISPLAY_W, DISPLAY_H = 320, 384
 RED = (100,40,46)
 BLACK = (0,0,0,0)
@@ -58,7 +62,7 @@ class Game():
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
                 print(topleft[0])
-                self.outline(1,1)
+                self.outline(topleft[0]/32,topleft[1]/32)
 
     def coordinates(self, x, y, offset=0):
         x *= 32
