@@ -58,7 +58,7 @@ class Game():
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
                 print(topleft[0])
-                self.outline(topleft[0],topleft[1],2,2)
+                self.outline(1,1)
 
     def coordinates(self, x, y, offset=0):
         x *= 32
