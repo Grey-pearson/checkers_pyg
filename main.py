@@ -62,7 +62,7 @@ class Game():
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
                 print(topleft[0])
-                self.outline(topleft[0]/32,topleft[1]/32)
+                # self.outline(topleft[0]/32,topleft[1]/32)
 
     def coordinates(self, x, y, offset=0):
         x *= 32
@@ -70,7 +70,7 @@ class Game():
         calculated_coordinates = (x,y-offset)
         return(calculated_coordinates)
 
-    def outline(self,x,y,w=2,h=2):
+    def outline_board(self,x,y,w=2,h=2):
         self.screen.blit(self.selector_TL, self.coordinates(x,y))
         self.screen.blit(self.selector_TR, self.coordinates(x+w,y))
         self.screen.blit(self.selector_BL, self.coordinates(x,y+h))
@@ -87,7 +87,7 @@ class Game():
 
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
-        self.outline(0,1,9,9)
+        self.outline_board(0,1,9,9)
         for col in range(8):
             for row in range(8):
                 # if (row+1) % 2 == 1 and (col+1) % 2 == 1 or (row+1) % 2 == 0 and (col+1) % 2 == 0:
