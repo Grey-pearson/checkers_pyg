@@ -42,6 +42,9 @@ class Game():
         self.black_to_play = my_sprite_sheet.parse_sprite('black_to_play.png')
 
         self.create_board()
+        self.plr_white = self.white_puck.get_rect()
+        self.plr_white.center = 0,0
+        pygame.draw.rect(self.screen, RED, self.plr_white, 1)
 
     def coordinates(self, x, y):
         x *= 32
