@@ -64,7 +64,7 @@ class Game():
         for i in range(len(self.plr_white)):
             if self.plr_white[i].collidepoint(mouse_pos):
                 topleft = self.plr_white[i].topleft
-                print(topleft[0])
+                # print(topleft[0])
                 self.selector.topleft = (topleft[0]-16, topleft[1]-16)
                 self.screen.blit(self.selector_square, self.selector)
                 # self.outline(topleft[0]/32,topleft[1]/32)
