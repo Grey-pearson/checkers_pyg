@@ -135,8 +135,8 @@ class Game():
 
 
 class Player():
-    def __init__(self,):
-        pass
+    def __init__(self):
+        pass #have to be able to use this in junction with Game
 
 if __name__ == "__main__":
     game = Game()
