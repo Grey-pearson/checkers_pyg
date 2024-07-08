@@ -71,7 +71,7 @@ class Game():
             # if self.plr_white[i].collidepoint(mouse_pos) == False:
                 
             
-
+    # easier grid placment meant for top left corner
     def coordinates(self, x, y, offset=0):
         x *= 32
         y *= 32
@@ -91,8 +91,6 @@ class Game():
                 self.screen.blit(self.selector_LM, self.coordinates(x,y+sides))
                 self.screen.blit(self.selector_RM, self.coordinates(x+w,y+sides))
 
-
-
     def create_board(self):
         self.screen.blit(self.white_square, self.coordinates(1,2))
         self.outline_board(0,1,9,9)
@@ -109,8 +107,6 @@ class Game():
         last_time = time.time()
         while True:
 
-            # delta time
-            # dt = time.time() - last_time
             last_time = time.time()
             self.screen.fill(RED)
             self.create_board()
