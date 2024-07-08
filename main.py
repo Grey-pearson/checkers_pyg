@@ -134,7 +134,7 @@ class Game():
             pygame.display.update()
 
 
-class Pucks():
+class Player():
     def __init__(self,):
         pass
 
