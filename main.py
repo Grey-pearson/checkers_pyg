@@ -11,6 +11,7 @@ RED = (80,30,36)
 BLACK = (0,0,0,0)
 
 
+
 class Game():
     def __init__(self):
         # to make assigning pieces to specific coordinates 
@@ -27,8 +28,8 @@ class Game():
         # you can string frames in this list format to get animnations stored in one variable
         # white_puck = [my_sprite_sheet.parse_sprite('white_puck.png')]  
         # 'pucks'
-        self.white_puck = my_sprite_sheet.parse_sprite('white_puck.png') 
-        self.black_puck = my_sprite_sheet.parse_sprite('black_puck.png')
+        # self.white_puck = my_sprite_sheet.parse_sprite('white_puck.png') 
+        # self.black_puck = my_sprite_sheet.parse_sprite('black_puck.png')
         # squares
         self.white_square = my_sprite_sheet.parse_sprite('white_square.png')
         self.black_square = my_sprite_sheet.parse_sprite('black_square.png')
@@ -132,7 +133,13 @@ class Game():
 
 class Player():
     def __init__(self):
-        pass #have to be able to use this in junction with Game
+        #have to be able to use this in junction with Game
+        pass
+        create_pucks()
+        
+    def create_pucks(self):
+        pass
+        
 
 if __name__ == "__main__":
     game = Game()
